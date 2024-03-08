@@ -6,6 +6,7 @@ using FinancialGoal.Infrastructure.Persistence;
 using FinancialGoal.Infrastructure.Persistence.Repositories;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.OpenApi.Models;
 using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -15,7 +16,21 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(
+    s =>
+    {
+        s.SwaggerDoc("v1", new OpenApiInfo
+        {
+            Title = "FinancialGoal.API",
+            Version = "v1",
+            Contact = new OpenApiContact
+            {
+                Name = "João Marcos Valente",
+                Email = "joaoprog.valente@gmail.com",
+                Url = new Uri("https://github.com/progjaoo")
+            }
+        });
+    });
 
 //connection string
 builder.Services.AddDbContext<ObjetivoFinanceiroDbContext>(options

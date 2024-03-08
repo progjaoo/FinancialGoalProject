@@ -1,6 +1,8 @@
-﻿using FinancialGoal.Application.Commands.ObjetivosFinanceiros.AtualizarObjetivo;
+﻿using FinancialGoal.Application.Abstracao;
+using FinancialGoal.Application.Commands.ObjetivosFinanceiros.AtualizarObjetivo;
 using FinancialGoal.Application.Commands.ObjetivosFinanceiros.CriarObjetivo;
 using FinancialGoal.Application.Commands.ObjetivosFinanceiros.DeletarObjetivo;
+using FinancialGoal.Application.Commands.ObjetivosFinanceiros.SimularObjetivoFinanceiro;
 using FinancialGoal.Application.Queries.ObjetivoFinanceiro.BuscarPorId;
 using FinancialGoal.Application.Queries.ObjetivoFinanceiro.BuscarTodos;
 using FinancialGoal.Core.Repositories;
@@ -86,10 +88,12 @@ namespace FinancialGoal.Controllers
 
             return NoContent();
         }
-        //public async Task<IActionResult> SimularObjetivoFinanceiro(SimularObjetivoCommand command)
-        //{
+        [HttpPost("SimularEvolucao")]
+        public async Task<IActionResult> SimularObjetivoFinanceiro(SimularObjetivoCommand command)
+        {
+            var resultado = await _mediator.Send(command);
 
-        //    return BadRequest();
-        //}
+            return Ok(Result<string>.Success(resultado));
+        }
     }
 }

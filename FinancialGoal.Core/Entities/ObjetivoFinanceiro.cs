@@ -31,6 +31,7 @@ namespace FinancialGoal.Core.Entities
         public DateTime? CriadoEm { get; private set; }
 
         public bool? EstaDeletado { get; private set; }
+        public byte[]? Imagem { get; set; }
         public List<Transacao> Transacoes { get; private set; }
 
         public void UpdateObjetivo(string titulo, decimal? quantidadeAlvo, DateTime? prazo)
