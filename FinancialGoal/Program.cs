@@ -47,6 +47,7 @@ builder.Services.AddMediatR(typeof(AtualizarObjetivoCommand));
 builder.Services.AddScoped<IObjetivoFinanceiroRepository, ObjetivoFinanceiroRepository>();
 builder.Services.AddScoped<ITransacaoRepository, TransacaoRepository>();
 builder.Services.AddScoped<IRelatorioRepository, RelatorioRepository>();
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 #endregion
 

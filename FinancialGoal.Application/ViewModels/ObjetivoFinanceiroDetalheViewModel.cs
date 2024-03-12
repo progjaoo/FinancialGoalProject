@@ -1,9 +1,4 @@
 ﻿using FinancialGoal.Core.Enums;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FinancialGoal.Application.ViewModels
 {
@@ -21,13 +16,13 @@ namespace FinancialGoal.Application.ViewModels
         }
 
         public int Id { get; set; }
-        public string Titulo { get;  set; }
-        public decimal? QuantidadeAlvo { get;  set; }
+        public string Titulo { get; set; }
+        public decimal? QuantidadeAlvo { get; set; }
 
-        public DateTime? Prazo { get;  set; }
+        public DateTime? Prazo { get; set; }
 
-        public StatusObjetivo StatusObj { get;  set; }
+        public StatusObjetivo StatusObj { get; set; }
 
-        public DateTime? CriadoEm { get;  set; }
+        public DateTime? CriadoEm { get; set; }
     }
 }
