@@ -11,8 +11,8 @@ namespace FinancialGoal.Core.Repositories
     {
         Task<List<Transacao>> BuscarTodos();
         Task<Transacao> BuscarPorId(int id);
-        Task AddAsync(Transacao transacao);
+        Task AddAsync(Transacao transacao, ObjetivoFinanceiro objetivoFinanceiro);
         Task Delete(int id);
-        Task SaveChanges();
+        Task SaveChangesAsync();
     }
 }

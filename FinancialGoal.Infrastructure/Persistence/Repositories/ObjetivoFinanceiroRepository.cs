@@ -43,10 +43,7 @@ namespace FinancialGoal.Infrastructure.Persistence.Repositories
         {
             _dbcontext.Remove(objetivoFinanceiro);
         }
-        public async Task SaveChangesAsync()
-        {
-            await _dbcontext.SaveChangesAsync();
-        }
-
+        public async Task SaveChangesAsync() 
+            =>await _dbcontext.SaveChangesAsync();
     }
 }

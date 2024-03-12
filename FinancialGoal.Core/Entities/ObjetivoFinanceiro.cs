@@ -17,8 +17,10 @@ namespace FinancialGoal.Core.Entities
             Prazo = prazo;
 
             StatusObj = StatusObjetivo.EmProgresso;
-            CriadoEm = DateTime.Now;
+            CriadoEm = DateTime.UtcNow;
             EstaDeletado = false;
+
+            Transacoes = new List<Transacao>();
         }
 
         public string Titulo { get; private set; }
@@ -32,7 +34,7 @@ namespace FinancialGoal.Core.Entities
 
         public bool? EstaDeletado { get; private set; }
         public byte[]? Imagem { get; set; }
-        public List<Transacao> Transacoes { get; private set; }
+        public List<Transacao> Transacoes { get; set; }
 
         public void UpdateObjetivo(string titulo, decimal? quantidadeAlvo, DateTime? prazo)
         {
