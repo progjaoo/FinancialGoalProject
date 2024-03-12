@@ -9,3 +9,4 @@ D:\PC - 2024\2 - PROJETOS PESSOAIS\Code First\FinancialGoal\FinancialGoal.Core\o
 D:\PC - 2024\2 - PROJETOS PESSOAIS\Code First\FinancialGoal\FinancialGoal.Core\obj\Debug\net8.0\refint\FinancialGoal.Core.dll
 D:\PC - 2024\2 - PROJETOS PESSOAIS\Code First\FinancialGoal\FinancialGoal.Core\obj\Debug\net8.0\FinancialGoal.Core.pdb
 D:\PC - 2024\2 - PROJETOS PESSOAIS\Code First\FinancialGoal\FinancialGoal.Core\obj\Debug\net8.0\ref\FinancialGoal.Core.dll
+D:\PC - 2024\2 - PROJETOS PESSOAIS\Code First\FinancialGoal\FinancialGoal.Core\obj\Debug\net8.0\FinancialGoal.Core.sourcelink.json

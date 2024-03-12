@@ -15,3 +15,4 @@ D:\PC - 2024\2 - PROJETOS PESSOAIS\Code First\FinancialGoal\FinancialGoal.Infras
 D:\PC - 2024\2 - PROJETOS PESSOAIS\Code First\FinancialGoal\FinancialGoal.Infrastructure\obj\Debug\net8.0\FinancialGoal.Infrastructure.csproj.AssemblyReference.cache
 D:\PC - 2024\2 - PROJETOS PESSOAIS\Code First\FinancialGoal\FinancialGoal.Infrastructure\obj\Debug\net8.0\FinancialGoal.Infrastructure.csproj.CopyComplete
 D:\PC - 2024\2 - PROJETOS PESSOAIS\Code First\FinancialGoal\FinancialGoal.Infrastructure\obj\Debug\net8.0\FinancialGoal.Infrastructure.genruntimeconfig.cache
+D:\PC - 2024\2 - PROJETOS PESSOAIS\Code First\FinancialGoal\FinancialGoal.Infrastructure\obj\Debug\net8.0\FinancialGoal.Infrastructure.sourcelink.json

@@ -17,3 +17,4 @@ D:\PC - 2024\2 - PROJETOS PESSOAIS\Code First\FinancialGoal\FinancialGoal.Applic
 D:\PC - 2024\2 - PROJETOS PESSOAIS\Code First\FinancialGoal\FinancialGoal.Application\obj\Debug\net8.0\FinancialGoal.Application.genruntimeconfig.cache
 D:\PC - 2024\2 - PROJETOS PESSOAIS\Code First\FinancialGoal\FinancialGoal.Application\bin\Debug\net8.0\FinancialGoal.Infrastructure.dll
 D:\PC - 2024\2 - PROJETOS PESSOAIS\Code First\FinancialGoal\FinancialGoal.Application\bin\Debug\net8.0\FinancialGoal.Infrastructure.pdb
+D:\PC - 2024\2 - PROJETOS PESSOAIS\Code First\FinancialGoal\FinancialGoal.Application\obj\Debug\net8.0\FinancialGoal.Application.sourcelink.json

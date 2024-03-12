@@ -2,6 +2,7 @@
 using FinancialGoal.Application.Commands.ObjetivosFinanceiros.AtualizarObjetivo;
 using FinancialGoal.Application.Commands.ObjetivosFinanceiros.CriarObjetivo;
 using FinancialGoal.Application.Commands.ObjetivosFinanceiros.DeletarObjetivo;
+using FinancialGoal.Application.Commands.ObjetivosFinanceiros.EnviarImagem;
 using FinancialGoal.Application.Commands.ObjetivosFinanceiros.SimularObjetivoFinanceiro;
 using FinancialGoal.Application.Queries.ObjetivoFinanceiro.BuscarPorId;
 using FinancialGoal.Application.Queries.ObjetivoFinanceiro.BuscarTodos;
@@ -94,6 +95,15 @@ namespace FinancialGoal.Controllers
             var resultado = await _mediator.Send(command);
 
             return Ok(Result<string>.Success(resultado));
+        }
+        [HttpPost("EnviarImagem")]
+        public async Task<IActionResult> EnviarImagem([FromForm] EnviarImagemCommand command)
+        {
+            var resultado = await _mediator.Send(command);
+
+            if (!resultado) return NotFound(Result<object>.Failure());
+
+            return Created("Imagem para foi enviada com sucesso", command.Imagem.FileName);
         }
     }
 }

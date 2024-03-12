@@ -12,9 +12,8 @@ using System.Reflection;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
+#region CONFIGURAÇÕES DO PROJETO
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(
     s =>
@@ -39,14 +38,17 @@ builder.Services.AddDbContext<ObjetivoFinanceiroDbContext>(options
 //mediatr
 builder.Services.AddMediatR(Assembly.GetExecutingAssembly());
 
+//CQRS-Dependency
 builder.Services.AddMediatR(typeof(BuscarTodosQuery));
 builder.Services.AddMediatR(typeof(AddObjetivoCommand));
 builder.Services.AddMediatR(typeof(AtualizarObjetivoCommand));
 
-//repositorioes
+//repositorios
 builder.Services.AddScoped<IObjetivoFinanceiroRepository, ObjetivoFinanceiroRepository>();
+builder.Services.AddScoped<IRelatorioRepository, RelatorioRepository>();
 
-//CQRS-Dependency
+#endregion
+
 
 var app = builder.Build();
 

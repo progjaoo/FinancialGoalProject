@@ -146,3 +146,9 @@ D:\PC - 2024\2 - PROJETOS PESSOAIS\Code First\FinancialGoal\FinancialGoal\obj\De
 D:\PC - 2024\2 - PROJETOS PESSOAIS\Code First\FinancialGoal\FinancialGoal\obj\Debug\net8.0\FinancialGoal.API.pdb
 D:\PC - 2024\2 - PROJETOS PESSOAIS\Code First\FinancialGoal\FinancialGoal\obj\Debug\net8.0\FinancialGoal.API.genruntimeconfig.cache
 D:\PC - 2024\2 - PROJETOS PESSOAIS\Code First\FinancialGoal\FinancialGoal\obj\Debug\net8.0\ref\FinancialGoal.API.dll
+D:\PC - 2024\2 - PROJETOS PESSOAIS\Code First\FinancialGoal\FinancialGoal\bin\Debug\net8.0\System.Net.Http.Formatting.dll
+D:\PC - 2024\2 - PROJETOS PESSOAIS\Code First\FinancialGoal\FinancialGoal\bin\Debug\net8.0\System.Web.Http.dll
+D:\PC - 2024\2 - PROJETOS PESSOAIS\Code First\FinancialGoal\FinancialGoal\bin\Debug\net8.0\Microsoft.AspNetCore.OpenApi.dll
+D:\PC - 2024\2 - PROJETOS PESSOAIS\Code First\FinancialGoal\FinancialGoal\bin\Debug\net8.0\Newtonsoft.Json.dll
+D:\PC - 2024\2 - PROJETOS PESSOAIS\Code First\FinancialGoal\FinancialGoal\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll
+D:\PC - 2024\2 - PROJETOS PESSOAIS\Code First\FinancialGoal\FinancialGoal\obj\Debug\net8.0\FinancialGoal.API.sourcelink.json
