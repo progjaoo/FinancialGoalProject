@@ -1,11 +1,5 @@
 ﻿using FinancialGoal.Core.Repositories;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FinancialGoal.Infrastructure.Persistence
 {
@@ -17,9 +11,9 @@ namespace FinancialGoal.Infrastructure.Persistence
         public IRelatorioRepository RelatorioRepository { get; }
         public ITransacaoRepository TransacaoRepository { get; }
 
-        public UnitOfWork(ObjetivoFinanceiroDbContext dbcontext, 
+        public UnitOfWork(ObjetivoFinanceiroDbContext dbcontext,
             IObjetivoFinanceiroRepository objetivoFinanceiroRepository,
-            IRelatorioRepository relatorioRepository, 
+            IRelatorioRepository relatorioRepository,
             ITransacaoRepository transacaoRepository)
         {
             _dbcontext = dbcontext;

@@ -1,4 +1,7 @@
-﻿using MediatR;
+﻿using FinancialGoal.Application.Commands.Transacao.EnviarTransacao;
+using FinancialGoal.Application.Queries.Transacao.BuscarPorId;
+using FinancialGoal.Application.Queries.Transacao.BuscarTodos;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FinancialGoal.API.Controllers
@@ -13,14 +16,34 @@ namespace FinancialGoal.API.Controllers
             _mediator = mediator;
         }
         [HttpGet]
-        public async Task <IActionResult> BuscarTodos()
+        public async Task<IActionResult> BuscarTodos()
         {
-            return Ok();
+            var transacao = new BuscarTodasTransacoesQuery();
+
+            var resultado = await _mediator.Send(transacao);
+
+            return Ok(resultado);
         }
         [HttpGet("{id}")]
-        public async Task<IActionResult> BuscarPorId(int id )
+        public async Task<IActionResult> BuscarPorId(int id)
         {
-            return Ok();
+            var transacaoId = new BuscarTransacaoPorIdQuery(id);
+
+            var resultado = await _mediator.Send(transacaoId);
+
+            if (resultado != null) NotFound();
+
+            return Ok(resultado);
+        }
+        [HttpPost]
+        public async Task<IActionResult> EnviarTransacao([FromBody] EnviarTransacaoCommand command)
+        {
+            var transacao = await _mediator.Send(command);
+
+            //if (transacao)
+            //    return NotFound(Result<EnviarTransacaoCommand>.NotFound());
+
+            return Created(string.Empty, "Transação realizada com sucesso");
         }
     }
 }

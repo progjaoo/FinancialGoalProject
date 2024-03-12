@@ -10,9 +10,9 @@ namespace FinancialGoal.Application.Commands.Transacao.EnviarTransacao
 {
     public class EnviarTransacaoCommand : IRequest<bool>
     {
-        public int IdObjetivo { get; set; }
-        public decimal? Quantidade { get;  set; }
+        public decimal Quantidade { get;  set; }
         public TipoTransacao Tipo { get; set; }
         public DateTime? DataTransacao { get; set; }
+        public int IdObjetivo { get; set; }
     }
 }

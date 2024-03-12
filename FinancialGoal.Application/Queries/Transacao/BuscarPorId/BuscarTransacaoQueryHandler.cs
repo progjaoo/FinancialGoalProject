@@ -10,14 +10,14 @@ using System.Threading.Tasks;
 
 namespace FinancialGoal.Application.Queries.Transacao.BuscarPorId
 {
-    public class BuscarPorIdQueryHandler : IRequestHandler<BuscarPorIdQuery, TransacaoDetalheViewModel>
+    public class BuscarTransacaoQueryHandler : IRequestHandler<BuscarTransacaoPorIdQuery, TransacaoDetalheViewModel>
     {
         private readonly ITransacaoRepository _transacaoRepository;
-        public BuscarPorIdQueryHandler(ITransacaoRepository transacaoRepository)
+        public BuscarTransacaoQueryHandler(ITransacaoRepository transacaoRepository)
         {
             _transacaoRepository = transacaoRepository;
         }
-        public async Task<TransacaoDetalheViewModel> Handle(BuscarPorIdQuery request, CancellationToken cancellationToken)
+        public async Task<TransacaoDetalheViewModel> Handle(BuscarTransacaoPorIdQuery request, CancellationToken cancellationToken)
         {
             var transacao = await _transacaoRepository.BuscarPorId(request.Id);
 
@@ -28,7 +28,8 @@ namespace FinancialGoal.Application.Queries.Transacao.BuscarPorId
                 transacao.Quantidade,
                 transacao.Tipo,
                 transacao.DataTransacao,
-                transacao.CriadoEm);
+                transacao.CriadoEm,
+                transacao.IdObjetivo);
 
             return transacaoDetalheViewModel;
         }

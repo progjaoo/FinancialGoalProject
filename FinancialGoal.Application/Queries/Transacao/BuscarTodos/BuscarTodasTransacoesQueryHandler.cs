@@ -4,14 +4,14 @@ using MediatR;
 
 namespace FinancialGoal.Application.Queries.Transacao.BuscarTodos
 {
-    public class BuscarTodasQueryHandler : IRequestHandler<BuscarTodosQuery, List<TransacaoViewModel>>
+    public class BuscarTodasTransacoesQueryHandler : IRequestHandler<BuscarTodasTransacoesQuery, List<TransacaoViewModel>>
     {
         private readonly ITransacaoRepository _transacaoRepository;
-        public BuscarTodasQueryHandler(ITransacaoRepository transacaoRepository)
+        public BuscarTodasTransacoesQueryHandler(ITransacaoRepository transacaoRepository)
         {
             _transacaoRepository = transacaoRepository;
         }
-        public async Task<List<TransacaoViewModel>> Handle(BuscarTodosQuery request, CancellationToken cancellationToken)
+        public async Task<List<TransacaoViewModel>> Handle(BuscarTodasTransacoesQuery request, CancellationToken cancellationToken)
         {
             var transacao = await _transacaoRepository.BuscarTodos();
 

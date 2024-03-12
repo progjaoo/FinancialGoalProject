@@ -7,8 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Commands\Transacao\" />
-    <Folder Include="Queries\Transacao\" />
+    <Folder Include="Commands\Transacao\RemoverTransacao\" />
   </ItemGroup>
 
   <ItemGroup>

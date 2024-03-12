@@ -14,20 +14,24 @@ namespace FinancialGoal.Application.Commands.Transacao.EnviarTransacao
     public class EnviarTransacaoCommandHandler : IRequestHandler<EnviarTransacaoCommand, bool>
     {
         private readonly IUnitOfWork _unitOfWork;
-        public EnviarTransacaoCommandHandler(IUnitOfWork unitOfWork)
+        private readonly IObjetivoFinanceiroRepository _objetivoFinanceiroRepository;
+        public EnviarTransacaoCommandHandler(IUnitOfWork unitOfWork, IObjetivoFinanceiroRepository objetivoFinanceiroRepository)
         {
             _unitOfWork = unitOfWork;
+            _objetivoFinanceiroRepository = objetivoFinanceiroRepository;
         }
         public async Task<bool> Handle(EnviarTransacaoCommand request, CancellationToken cancellationToken)
         {
             var objetivoFinanceiro = await _unitOfWork.ObjetivoFinanceiroRepository.BuscarPorId(request.IdObjetivo);
 
-            if (objetivoFinanceiro == null) return false;
+            if (objetivoFinanceiro == null)
+                return false;
 
             if (request.Tipo == TipoTransacao.Saque)
                 request.Quantidade *= -1;
 
-            var transacao = new Core.Entities.Transacao(request.IdObjetivo,request.Quantidade, request.Tipo,request.DataTransacao);
+            var transacao = new Core.Entities.Transacao(request.Quantidade, 
+                request.Tipo, request.DataTransacao, request.IdObjetivo);
 
             await _unitOfWork.BeginTransactionAsync();
             await _unitOfWork.TransacaoRepository.AddAsync(transacao, objetivoFinanceiro);

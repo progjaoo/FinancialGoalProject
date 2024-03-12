@@ -3,5 +3,5 @@ using MediatR;
 
 namespace FinancialGoal.Application.Queries.Transacao.BuscarTodos
 {
-    public class BuscarTodosQuery : IRequest<List<TransacaoViewModel>> { }
+    public class BuscarTodasTransacoesQuery : IRequest<List<TransacaoViewModel>> { }
 }

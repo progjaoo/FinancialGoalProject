@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace FinancialGoal.Application.Queries.Transacao.BuscarPorId
 {
-    public class BuscarPorIdQuery : IRequest<TransacaoDetalheViewModel>
+    public class BuscarTransacaoPorIdQuery : IRequest<TransacaoDetalheViewModel>
     {
-        public BuscarPorIdQuery(int id)
+        public BuscarTransacaoPorIdQuery(int id)
         {
             Id = id;
         }

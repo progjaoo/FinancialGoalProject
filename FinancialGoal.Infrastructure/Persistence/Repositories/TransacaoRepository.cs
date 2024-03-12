@@ -25,7 +25,7 @@ namespace FinancialGoal.Infrastructure.Persistence.Repositories
                 objetivoFinanceiro.Transacoes = objetivoFinanceiro.Transacoes ?? new List<Transacao>();
                 objetivoFinanceiro.Transacoes.Add(transacao);
 
-                _dbcontext.Add(objetivoFinanceiro);
+                _dbcontext.Update(objetivoFinanceiro);
             }
             await _dbcontext.Transacoes.AddAsync(transacao);
         }

@@ -9,12 +9,14 @@ namespace FinancialGoal.Core.Entities
 {
     public class Transacao : BaseEntity
     {
-        public Transacao(int idObjetivo, decimal? quantidade, TipoTransacao tipo, DateTime? dataTransacao)
+        private Transacao() { }
+        public Transacao(decimal quantidade, TipoTransacao tipo, DateTime? dataTransacao, int idObjetivo)
         {
-            IdObjetivo = idObjetivo;
-            Quantidade = quantidade;
+            Quantidade = Math.Round(quantidade, 2);
             Tipo = tipo;
             DataTransacao = dataTransacao;
+            IdObjetivo = idObjetivo;
+
             CriadoEm = DateTime.UtcNow;
             EstaDeletado = false;
         }
@@ -25,6 +27,6 @@ namespace FinancialGoal.Core.Entities
         public TipoTransacao Tipo { get; private set; }
         public DateTime? DataTransacao { get; private set; }
         public DateTime? CriadoEm { get; private set; }
-        public bool? EstaDeletado { get; private set; }
+        public bool? EstaDeletado { get;  set; }
     }
 }
