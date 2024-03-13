@@ -1,9 +1,11 @@
 using FinancialGoal.Application.Commands.ObjetivosFinanceiros.AtualizarObjetivo;
 using FinancialGoal.Application.Commands.ObjetivosFinanceiros.CriarObjetivo;
 using FinancialGoal.Application.Queries.ObjetivoFinanceiro.BuscarTodos;
+using FinancialGoal.Application.Validators.ObjetivosFinanceiro;
 using FinancialGoal.Core.Repositories;
 using FinancialGoal.Infrastructure.Persistence;
 using FinancialGoal.Infrastructure.Persistence.Repositories;
+using FluentValidation.AspNetCore;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
@@ -13,7 +15,10 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 #region CONFIGURAÇÕES DO PROJETO
-builder.Services.AddControllers();
+builder.Services.AddControllers()
+    .AddFluentValidation(fv=> fv.RegisterValidatorsFromAssemblyContaining<CriarObjetivoValidator>());
+
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(
     s =>

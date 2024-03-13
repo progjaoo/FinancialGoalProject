@@ -14,11 +14,9 @@ namespace FinancialGoal.Application.Commands.Transacao.EnviarTransacao
     public class EnviarTransacaoCommandHandler : IRequestHandler<EnviarTransacaoCommand, bool>
     {
         private readonly IUnitOfWork _unitOfWork;
-        private readonly IObjetivoFinanceiroRepository _objetivoFinanceiroRepository;
-        public EnviarTransacaoCommandHandler(IUnitOfWork unitOfWork, IObjetivoFinanceiroRepository objetivoFinanceiroRepository)
+        public EnviarTransacaoCommandHandler(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
-            _objetivoFinanceiroRepository = objetivoFinanceiroRepository;
         }
         public async Task<bool> Handle(EnviarTransacaoCommand request, CancellationToken cancellationToken)
         {
