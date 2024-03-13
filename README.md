@@ -1,26 +1,26 @@
-# Project: Financial Goal
+# Projeto de Objetivos Financeiros
 
-## Technologies and practices
-- AspNet.Core( .NET 7 )
-- Clean Architecture
+## Tecnologias Utilizadas
+- AspNet.Core( .NET 8 )
+- Arquitetura Limpa
 - MediatR
-- Transactions
+- Transações
 - IUnitOfWork
 - Entity Framework Core
 - CQRS
 - Padrao Repository
 
-#### Develop a system (API or Full-Stack) for managing financial objectives, based on Nubank boxes.
+#### Desenvolver uma API para controle de Objetivos financeiros.
 
-1. Cash Management (Registration, Update, Removal, Listing, Details)
-   - Create an endpoint that allows you to simulate the evolution of Cash, based on the amount of monthly contributions and income (PLUS)
-   - Create an endpoint that allows you to upload a goal/box cover image (PLUS) file
-   - Create a property for the total value of the Box always calculated when registering new transactions, instead of always adding everything up when searching for details (PLUS) Tip: use transaction
-2. Transaction Management (Registration, Removal, Listing, Details)
-3. Reports
-   - Generate a report on the evolution of Boxes (PLUS)
+1. Gestão de caixa (cadastro, atualização, remoção, listagem, detalhes)
+   - Criar um endpoint que permite simular a evolução do Cash, com base no valor das contribuições mensais e rendimentos (PLUS)
+   - Crie um endpoint que permita fazer upload de um arquivo de imagem de meta/capa de caixa (PLUS)
+   - Crie uma propriedade para o valor total da Caixa sempre calculado ao registrar novas transações, ao invés de sempre somar tudo na busca por detalhes (PLUS) Dica: use transação
+2. Gerenciamento de transações (registro, remoção, listagem, detalhes)
+3. Relatórios
+   - Gerar relatório de evolução das Caixas (PLUS)
 
-#### Business rules
+#### Regras de negócios aplicada
 
-- Transaction must be made with up to two decimal places of precision, and cannot be negative
-- Type: Deposit / Withdraw
+- A transação deverá ser realizada com até duas casas decimais de precisão, não podendo ser negativa
+- Tipo: Depósito / Retirada
