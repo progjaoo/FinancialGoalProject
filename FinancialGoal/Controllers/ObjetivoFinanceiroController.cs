@@ -54,7 +54,7 @@ namespace FinancialGoal.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> Atualizar([FromBody] AtualizarObjetivoCommand command)
         {
-            await _mediator.Send(command);
+            var result = await _mediator.Send(command);
 
             return NoContent();
         }
